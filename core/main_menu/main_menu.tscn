@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bg3at4kb0vcf6"]
+[gd_scene load_steps=8 format=3 uid="uid://bg3at4kb0vcf6"]
 
 [ext_resource type="Script" path="res://core/main_menu/main_menu.gd" id="1_qbncf"]
 [ext_resource type="PackedScene" uid="uid://j7lsyil81xto" path="res://core/main.tscn" id="2_as5rc"]
+[ext_resource type="PackedScene" uid="uid://crsbep170ksff" path="res://core/options_menu/options_menu.tscn" id="3_o5gol"]
 
 [sub_resource type="Gradient" id="Gradient_uyt7p"]
-colors = PackedColorArray(0.631373, 0.862745, 0, 1, 1, 1, 0.176471, 1)
+colors = PackedColorArray(0.658607, 0.799061, 0.855164, 1, 0.511924, 0.749881, 0.570495, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_magtn"]
 gradient = SubResource("Gradient_uyt7p")
@@ -17,7 +18,7 @@ font_names = PackedStringArray("Impact")
 [sub_resource type="SystemFont" id="SystemFont_0rss5"]
 font_names = PackedStringArray("Impact")
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("start_button", "settings_button", "quit_button")]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("start_button", "options_button", "quit_button", "options_menu", "main_menu_container")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,9 +26,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qbncf")
-start_button = NodePath("MarginContainer/HBoxContainer/VBoxContainer/StartButton")
-settings_button = NodePath("MarginContainer/HBoxContainer/VBoxContainer/SettingsButton")
-quit_button = NodePath("MarginContainer/HBoxContainer/VBoxContainer/QuitButton")
+start_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/StartButton")
+options_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/OptionsButton")
+quit_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/QuitButton")
+options_menu = NodePath("OptionsMenu")
+main_menu_container = NodePath("MainMenuContainer")
 main_scene = ExtResource("2_as5rc")
 
 [node name="Background" type="TextureRect" parent="."]
@@ -39,7 +42,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_magtn")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MainMenuContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,14 +54,14 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuContainer"]
 layout_mode = 2
 theme_override_constants/separation = 60
 
-[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Separator" type="Control" parent="MainMenuContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="MainMenuContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -67,35 +70,39 @@ theme_override_fonts/font = SubResource("SystemFont_t882a")
 theme_override_font_sizes/font_size = 64
 text = "GAME TITLE"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenuContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Separator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Separator" type="Control" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="StartButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
 theme_override_font_sizes/font_size = 20
 text = "Start Game"
 
-[node name="SettingsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
 theme_override_font_sizes/font_size = 20
-text = "Settings"
+text = "Options"
 
-[node name="QuitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
 theme_override_font_sizes/font_size = 20
 text = "Quit Game"
+
+[node name="OptionsMenu" parent="." instance=ExtResource("3_o5gol")]
+visible = false
+layout_mode = 1
