@@ -1,4 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bg3at4kb0vcf6"]
+[gd_scene load_steps=7 format=3 uid="uid://bg3at4kb0vcf6"]
+
+[ext_resource type="Script" path="res://core/main_menu/main_menu.gd" id="1_qbncf"]
+[ext_resource type="PackedScene" uid="uid://j7lsyil81xto" path="res://core/main.tscn" id="2_as5rc"]
 
 [sub_resource type="Gradient" id="Gradient_uyt7p"]
 colors = PackedColorArray(0.631373, 0.862745, 0, 1, 1, 1, 0.176471, 1)
@@ -14,13 +17,18 @@ font_names = PackedStringArray("Impact")
 [sub_resource type="SystemFont" id="SystemFont_0rss5"]
 font_names = PackedStringArray("Impact")
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("start_button", "settings_button", "quit_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qbncf")
+start_button = NodePath("MarginContainer/HBoxContainer/VBoxContainer/StartButton")
+settings_button = NodePath("MarginContainer/HBoxContainer/VBoxContainer/SettingsButton")
+quit_button = NodePath("MarginContainer/HBoxContainer/VBoxContainer/QuitButton")
+main_scene = ExtResource("2_as5rc")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -85,9 +93,9 @@ theme_override_fonts/font = SubResource("SystemFont_0rss5")
 theme_override_font_sizes/font_size = 20
 text = "Settings"
 
-[node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
 theme_override_font_sizes/font_size = 20
-text = "Exit Game"
+text = "Quit Game"
