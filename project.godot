@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="godot_template"
+run/main_scene="res://core/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://core/icon.svg"
+
+[display]
+
+window/size/mode=3
+window/size/initial_position_type=2
 
 [dotnet]
 
@@ -21,6 +27,7 @@ project/assembly_name="godot_template"
 [file_customization]
 
 folder_colors={
-"res://Core/": "blue",
-"res://addons/": "gray"
+"res://addons/": "gray",
+"res://autoloads/": "red",
+"res://core/": "blue"
 }
