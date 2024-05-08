@@ -21,5 +21,6 @@ project/assembly_name="godot_template"
 [file_customization]
 
 folder_colors={
-"res://Core/": "blue"
+"res://Core/": "blue",
+"res://addons/": "gray"
 }
