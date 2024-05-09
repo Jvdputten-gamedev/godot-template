@@ -26,12 +26,13 @@ project/assembly_name="godot_template"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/filesystem_drawer/plugin.cfg", "res://addons/godot_state_charts/plugin.cfg")
+enabled=PackedStringArray("res://addons/filesystem_drawer/plugin.cfg", "res://addons/godot_state_charts/plugin.cfg", "res://addons/gut/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
 "res://addons/": "gray",
 "res://autoloads/": "red",
-"res://core/": "blue"
+"res://core/": "blue",
+"res://test/": "pink"
 }
