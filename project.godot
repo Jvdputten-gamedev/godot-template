@@ -15,11 +15,6 @@ run/main_scene="res://core/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://core/icon.svg"
 
-[display]
-
-window/size/mode=3
-window/size/initial_position_type=2
-
 [dotnet]
 
 project/assembly_name="godot_template"
