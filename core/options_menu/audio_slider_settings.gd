@@ -14,7 +14,6 @@ func _ready():
 	set_name_label_text()
 	set_slider_value()
 
-
 func set_name_label_text() -> void:
 	audio_name_label.text = str(bus_name) + " Volume"
 
