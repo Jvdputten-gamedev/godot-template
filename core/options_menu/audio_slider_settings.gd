@@ -6,7 +6,7 @@ extends Control
 
 @export_enum("Master", "Music", "Sfx") var bus_name: String
 
-var bus_index: int = 0
+@onready var bus_index: int = 0
 
 func _ready():
 	h_slider.value_changed.connect(_on_value_changed)

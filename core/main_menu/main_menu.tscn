@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bg3at4kb0vcf6"]
+[gd_scene load_steps=10 format=3 uid="uid://bg3at4kb0vcf6"]
 
 [ext_resource type="Script" path="res://core/main_menu/main_menu.gd" id="1_qbncf"]
 [ext_resource type="PackedScene" uid="uid://j7lsyil81xto" path="res://core/main.tscn" id="2_as5rc"]
 [ext_resource type="PackedScene" uid="uid://crsbep170ksff" path="res://core/options_menu/options_menu.tscn" id="3_o5gol"]
+[ext_resource type="AudioStream" uid="uid://c80rhawxs31f6" path="res://core/main_menu/summer-walk-152722.mp3" id="4_4jsq8"]
+[ext_resource type="AudioStream" uid="uid://bmxegdk2nl4yx" path="res://core/main_menu/generic_click_pop.mp3" id="5_we3vy"]
 
 [sub_resource type="Gradient" id="Gradient_uyt7p"]
 colors = PackedColorArray(0.658607, 0.799061, 0.855164, 1, 0.511924, 0.749881, 0.570495, 1)
@@ -18,7 +20,7 @@ font_names = PackedStringArray("Impact")
 [sub_resource type="SystemFont" id="SystemFont_0rss5"]
 font_names = PackedStringArray("Impact")
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("start_button", "options_button", "quit_button", "options_menu", "main_menu_container")]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("start_button", "options_button", "quit_button", "options_menu", "main_menu_container", "sfx_stream_player")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,6 +34,7 @@ quit_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/QuitButton
 options_menu = NodePath("OptionsMenu")
 main_menu_container = NodePath("MainMenuContainer")
 main_scene = ExtResource("2_as5rc")
+sfx_stream_player = NodePath("ButtonSound")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -82,21 +85,21 @@ alignment = 1
 [node name="Separator" type="Control" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="StartButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
+[node name="StartButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer" groups=["menu_button"]]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
 theme_override_font_sizes/font_size = 20
 text = "Start Game"
 
-[node name="OptionsButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer" groups=["menu_button"]]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
 theme_override_font_sizes/font_size = 20
 text = "Options"
 
-[node name="QuitButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer" groups=["menu_button"]]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
@@ -108,6 +111,12 @@ visible = false
 layout_mode = 1
 
 [node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4jsq8")
 volume_db = -12.0
 autoplay = true
 bus = &"Music"
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_we3vy")
+volume_db = -13.0
+bus = &"Sfx"
