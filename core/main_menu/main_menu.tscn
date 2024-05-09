@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bg3at4kb0vcf6"]
+[gd_scene load_steps=11 format=3 uid="uid://bg3at4kb0vcf6"]
 
 [ext_resource type="Script" path="res://core/main_menu/main_menu.gd" id="1_qbncf"]
 [ext_resource type="PackedScene" uid="uid://j7lsyil81xto" path="res://core/main.tscn" id="2_as5rc"]
+[ext_resource type="Theme" uid="uid://810w2dhuww4v" path="res://core/main_menu/main_menu_theme.tres" id="3_ejn1t"]
 [ext_resource type="PackedScene" uid="uid://crsbep170ksff" path="res://core/options_menu/options_menu.tscn" id="3_o5gol"]
 [ext_resource type="AudioStream" uid="uid://c80rhawxs31f6" path="res://core/main_menu/summer-walk-152722.mp3" id="4_4jsq8"]
 [ext_resource type="AudioStream" uid="uid://bmxegdk2nl4yx" path="res://core/main_menu/generic_click_pop.mp3" id="5_we3vy"]
@@ -88,13 +89,14 @@ layout_mode = 2
 [node name="StartButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer" groups=["menu_button"]]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+theme = ExtResource("3_ejn1t")
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
-theme_override_font_sizes/font_size = 20
 text = "Start Game"
 
 [node name="OptionsButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer" groups=["menu_button"]]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+theme = ExtResource("3_ejn1t")
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
 theme_override_font_sizes/font_size = 20
 text = "Options"
@@ -102,6 +104,7 @@ text = "Options"
 [node name="QuitButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer" groups=["menu_button"]]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+theme = ExtResource("3_ejn1t")
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
 theme_override_font_sizes/font_size = 20
 text = "Quit Game"

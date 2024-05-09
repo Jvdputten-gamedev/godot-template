@@ -1,14 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci0u4h7k1f5nh"]
+[gd_scene load_steps=3 format=3 uid="uid://ci0u4h7k1f5nh"]
 
 [ext_resource type="Script" path="res://core/options_menu/audio_slider_settings.gd" id="1_ro8vm"]
+[ext_resource type="Theme" uid="uid://810w2dhuww4v" path="res://core/main_menu/main_menu_theme.tres" id="2_yb2yr"]
 
 [node name="AudioSliderSettings" type="Control" node_paths=PackedStringArray("audio_name_label", "audio_number_label", "h_slider")]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
 script = ExtResource("1_ro8vm")
 audio_name_label = NodePath("HBoxContainer/AudioNameLabel")
 audio_number_label = NodePath("HBoxContainer/AudioNumberLabel")
@@ -17,28 +20,29 @@ bus_name = "Master"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -488.0
-offset_right = 488.0
+anchors_preset = 10
+anchor_right = 1.0
 offset_bottom = 45.0
 grow_horizontal = 2
 theme_override_constants/separation = 42
+alignment = 1
 
 [node name="AudioNameLabel" type="Label" parent="HBoxContainer"]
-custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+size_flags_horizontal = 10
+theme = ExtResource("2_yb2yr")
 text = "Master Volume"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="HSlider" type="HSlider" parent="HBoxContainer"]
+[node name="HSlider" type="HSlider" parent="HBoxContainer" groups=["menu_button"]]
 custom_minimum_size = Vector2(200, 32)
 layout_mode = 2
 size_flags_vertical = 1
+theme = ExtResource("2_yb2yr")
 max_value = 1.0
 step = 0.01
 
@@ -46,7 +50,9 @@ step = 0.01
 layout_mode = 2
 
 [node name="AudioNumberLabel" type="Label" parent="HBoxContainer"]
-custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "99.2"
+size_flags_horizontal = 2
+size_flags_vertical = 1
+theme = ExtResource("2_yb2yr")
+text = "99.2%"
+vertical_alignment = 1
