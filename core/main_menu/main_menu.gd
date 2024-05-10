@@ -25,7 +25,7 @@ func _ready():
 		button.mouse_entered.connect(_on_mouse_entered_menu_button)
 
 func _on_start_button_down():
-	get_tree().change_scene_to_packed(main_scene)
+	SceneTransition.fade(main_scene)
 
 func _on_options_button_down():
 	main_menu_container.visible = false

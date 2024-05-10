@@ -15,6 +15,10 @@ run/main_scene="res://core/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://core/icon.svg"
 
+[autoload]
+
+SceneTransition="*res://core/autoloads/scene_manager.tscn"
+
 [dotnet]
 
 project/assembly_name="godot_template"

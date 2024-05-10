@@ -98,7 +98,6 @@ custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme = ExtResource("3_ejn1t")
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
-theme_override_font_sizes/font_size = 20
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer" groups=["menu_button"]]
@@ -106,7 +105,6 @@ custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme = ExtResource("3_ejn1t")
 theme_override_fonts/font = SubResource("SystemFont_0rss5")
-theme_override_font_sizes/font_size = 20
 text = "Quit Game"
 
 [node name="OptionsMenu" parent="." instance=ExtResource("3_o5gol")]
