@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0hh0klgltqfy"]
+
+[ext_resource type="Script" path="res://core/autoloads/scene_manager.gd" id="1_6658h"]
+[ext_resource type="AudioStream" uid="uid://c80rhawxs31f6" path="res://core/ui/main_menu/summer-walk-152722.mp3" id="2_12fpc"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_6658h")
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_12fpc")
+volume_db = -12.0
+autoplay = true
+bus = &"Music"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dlxc1j0sdvabq"]
 
-[ext_resource type="Script" path="res://core/options_menu/hotkey_rebind_button.gd" id="1_65qhu"]
-[ext_resource type="Theme" uid="uid://810w2dhuww4v" path="res://core/main_menu/main_menu_theme.tres" id="2_b76a4"]
+[ext_resource type="Script" path="res://core/ui/options_menu/hotkey_rebind_button.gd" id="1_65qhu"]
+[ext_resource type="Theme" uid="uid://810w2dhuww4v" path="res://core/ui/main_menu/main_menu_theme.tres" id="2_b76a4"]
 
 [node name="HotkeyRebindButton" type="Control" node_paths=PackedStringArray("label", "button") groups=["hotkey_button"]]
 custom_minimum_size = Vector2(0, 48)

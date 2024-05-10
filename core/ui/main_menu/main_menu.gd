@@ -10,7 +10,6 @@ extends Control
 
 @export var main_scene: PackedScene
 
-@export var sfx_stream_player: AudioStreamPlayer
 
 
 
@@ -21,11 +20,8 @@ func _ready():
 	options_menu.exit_options_menu.connect(_on_exit_options_menu)
 
 
-	for button in get_tree().get_nodes_in_group("menu_button"):
-		button.mouse_entered.connect(_on_mouse_entered_menu_button)
-
 func _on_start_button_down():
-	SceneTransition.fade(main_scene)
+	SceneManager.fade(main_scene)
 
 func _on_options_button_down():
 	main_menu_container.visible = false
@@ -36,6 +32,3 @@ func _on_quit_button_down():
 
 func _on_exit_options_menu() -> void:
 	main_menu_container.visible = true
-
-func _on_mouse_entered_menu_button() -> void:
-	sfx_stream_player.play()

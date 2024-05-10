@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ci0u4h7k1f5nh"]
 
-[ext_resource type="Script" path="res://core/options_menu/audio_slider_settings.gd" id="1_ro8vm"]
-[ext_resource type="Theme" uid="uid://810w2dhuww4v" path="res://core/main_menu/main_menu_theme.tres" id="2_yb2yr"]
+[ext_resource type="Script" path="res://core/ui/options_menu/audio_slider_settings.gd" id="1_ro8vm"]
+[ext_resource type="Theme" uid="uid://810w2dhuww4v" path="res://core/ui/main_menu/main_menu_theme.tres" id="2_yb2yr"]
 
 [node name="AudioSliderSettings" type="Control" node_paths=PackedStringArray("audio_name_label", "audio_number_label", "h_slider")]
 custom_minimum_size = Vector2(0, 48)
