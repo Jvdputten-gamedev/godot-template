@@ -14,3 +14,4 @@ func fade(scene:PackedScene):
 	await animation_player.animation_finished
 	get_tree().change_scene_to_packed(scene)
 	animation_player.play("fade_in")
+

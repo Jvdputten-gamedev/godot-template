@@ -81,16 +81,19 @@ alignment = 1
 layout_mode = 2
 
 [node name="StartButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 48)
 layout_mode = 2
 theme = ExtResource("3_y0waf")
 text = "Start"
 
 [node name="Optionsutton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme = ExtResource("3_y0waf")
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme = ExtResource("3_y0waf")
 text = "Quit"
