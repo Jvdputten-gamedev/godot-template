@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://core/ui/main_menu/main_menu.gd" id="1_ideyw"]
 [ext_resource type="PackedScene" uid="uid://j7lsyil81xto" path="res://core/main.tscn" id="2_rwcg4"]
-[ext_resource type="PackedScene" uid="uid://0x03v0884fku" path="res://core/ui/ui_components/button/button_plus.tscn" id="3_v3584"]
+[ext_resource type="Theme" uid="uid://810w2dhuww4v" path="res://core/ui/main_menu/main_menu_theme.tres" id="3_y0waf"]
 [ext_resource type="PackedScene" uid="uid://crsbep170ksff" path="res://core/ui/options_menu/options_menu.tscn" id="4_myujj"]
 
 [sub_resource type="Gradient" id="Gradient_uyt7p"]
@@ -25,7 +25,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ideyw")
 start_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/StartButton")
-options_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/OptionsButton")
+options_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/Optionsutton")
 quit_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/QuitButton")
 options_menu = NodePath("OptionsMenu")
 main_menu_container = NodePath("MainMenuContainer")
@@ -80,19 +80,20 @@ alignment = 1
 [node name="Separator" type="Control" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="StartButton" parent="MainMenuContainer/HBoxContainer/VBoxContainer" instance=ExtResource("3_v3584")]
+[node name="StartButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_y0waf")
 text = "Start"
 
-[node name="OptionsButton" parent="MainMenuContainer/HBoxContainer/VBoxContainer" node_paths=PackedStringArray("hover_sound") instance=ExtResource("3_v3584")]
+[node name="Optionsutton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_y0waf")
 text = "Options"
-hover_sound = NodePath("../StartButton/HoverSound")
 
-[node name="QuitButton" parent="MainMenuContainer/HBoxContainer/VBoxContainer" node_paths=PackedStringArray("hover_sound") instance=ExtResource("3_v3584")]
+[node name="QuitButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_y0waf")
 text = "Quit"
-hover_sound = NodePath("../StartButton/HoverSound")
 
 [node name="OptionsMenu" parent="." instance=ExtResource("4_myujj")]
 visible = false

@@ -5,8 +5,8 @@ var main_menu_scene
 
 
 
-func before_all():
-	main_menu_scene = preload("res://core/main_menu/main_menu.tscn").instantiate()
+# func before_all():
+# 	main_menu_scene = preload("res://core/main_menu/main_menu.tscn").instantiate()
 
 
 func test_clicking_options_disables_main_menu():
