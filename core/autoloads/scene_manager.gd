@@ -4,14 +4,14 @@ extends Node
 
 enum TransitionType {FADE}
 
-func transition(type: TransitionType, scene:PackedScene):
+func transition(type: TransitionType, scene:String):
 	match type:
 		TransitionType.FADE:
 			fade(scene)
 
-func fade(scene:PackedScene):
+func fade(scene:String):
 	animation_player.play("fade_out")
 	await animation_player.animation_finished
-	get_tree().change_scene_to_packed(scene)
+	get_tree().change_scene_to_file(scene)
 	animation_player.play("fade_in")
 

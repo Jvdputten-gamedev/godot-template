@@ -1,22 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://bg3at4kb0vcf6"]
+[gd_scene load_steps=7 format=3 uid="uid://bg3at4kb0vcf6"]
 
 [ext_resource type="Script" path="res://core/ui/main_menu/main_menu.gd" id="1_ideyw"]
-[ext_resource type="PackedScene" uid="uid://j7lsyil81xto" path="res://core/main.tscn" id="2_rwcg4"]
 [ext_resource type="Theme" uid="uid://810w2dhuww4v" path="res://core/ui/main_menu/main_menu_theme.tres" id="3_y0waf"]
 [ext_resource type="PackedScene" uid="uid://crsbep170ksff" path="res://core/ui/options_menu/options_menu.tscn" id="4_myujj"]
 
-[sub_resource type="Gradient" id="Gradient_uyt7p"]
+[sub_resource type="Gradient" id="Gradient_uavnr"]
 colors = PackedColorArray(0.658607, 0.799061, 0.855164, 1, 0.511924, 0.749881, 0.570495, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_magtn"]
-gradient = SubResource("Gradient_uyt7p")
+gradient = SubResource("Gradient_uavnr")
 fill_from = Vector2(0.465812, 0.0726496)
 fill_to = Vector2(0.452991, 0.948718)
 
 [sub_resource type="SystemFont" id="SystemFont_t882a"]
 font_names = PackedStringArray("Impact")
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("start_button", "options_button", "quit_button", "options_menu", "main_menu_container")]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("start_button", "options_button", "credits_button", "quit_button", "options_menu", "main_menu_container")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,10 +25,10 @@ grow_vertical = 2
 script = ExtResource("1_ideyw")
 start_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/StartButton")
 options_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/Optionsutton")
+credits_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/CreditsButton")
 quit_button = NodePath("MainMenuContainer/HBoxContainer/VBoxContainer/QuitButton")
 options_menu = NodePath("OptionsMenu")
 main_menu_container = NodePath("MainMenuContainer")
-main_scene = ExtResource("2_rwcg4")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -91,6 +90,12 @@ custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme = ExtResource("3_y0waf")
 text = "Options"
+
+[node name="CreditsButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme = ExtResource("3_y0waf")
+text = "Credits"
 
 [node name="QuitButton" type="Button" parent="MainMenuContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 48)

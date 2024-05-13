@@ -3,19 +3,21 @@ extends Control
 
 @export var start_button: Button
 @export var options_button: Button
+@export var credits_button: Button
 @export var quit_button: Button
 
 @export var options_menu: OptionsMenu
 @export var main_menu_container: MarginContainer
 
-@export var main_scene: PackedScene
-
+const PATH_TO_CREDITS = "res://core/credits/credits.tscn"
+const PATH_TO_MAIN_SCENE = "res://core/main.tscn"
 
 
 
 func _ready():
 	start_button.button_down.connect(_on_start_button_down)
 	options_button.button_down.connect(_on_options_button_down)
+	credits_button.button_down.connect(_on_credits_button_pressed)
 	quit_button.button_down.connect(_on_quit_button_down)
 	options_menu.exit_options_menu.connect(_on_exit_options_menu)
 
@@ -23,7 +25,7 @@ func _ready():
 
 
 func _on_start_button_down():
-	SceneManager.fade(main_scene)
+	SceneManager.fade(PATH_TO_MAIN_SCENE)
 
 func _on_options_button_down():
 	main_menu_container.visible = false
@@ -34,3 +36,6 @@ func _on_quit_button_down():
 
 func _on_exit_options_menu() -> void:
 	main_menu_container.visible = true
+
+func _on_credits_button_pressed() -> void:
+	SceneManager.fade(PATH_TO_CREDITS)

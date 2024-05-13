@@ -15,7 +15,6 @@ func set_action_name() -> void:
 	label.text = "Unassigned"
 
 	# add all action names here and a name that will appear on the button>>>.
-	print(action_name)
 	match action_name:
 		"move_left":
 			label.text = "Move Left"
