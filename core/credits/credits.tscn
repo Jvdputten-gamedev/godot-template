@@ -10,8 +10,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fsowh")
-bg_color = Color(0, 0, 0.113725, 1)
-title_color = Color(0.294118, 0.364706, 0.839216, 1)
+bg_color = Color(0, 0, 0.0784314, 1)
+title_color = Color(0.564706, 0.647059, 0.960784, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
