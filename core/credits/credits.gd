@@ -18,7 +18,6 @@ var speed_up := false
 
 @onready var colorrect := $ColorRect
 @onready var videoplayer := $VideoPlayer
-@onready var line := $CreditsContainer/Line
 @onready var credits_text := $CreditsContainer/RichTextLabel as RichTextLabel
 
 var credits = [
@@ -27,7 +26,8 @@ var credits = [
 	{"title": "Music", "content": "Musician Name"},
 	{"title": "Sound Effects", "content": "SFX Name"},
 	{"title": "Testers", "content": "Name 1\nName 2\nName 3"},
-	{"title": "Tools used", "content": "Developed with Godot Engine\n[url=https://godotengine.org/license]https://godotengine.org/license[/url]"},
+	{"title": "Tools used", "content": "Developed with [url=https://godotengine.org/license]Godot Engine[/url]\n"},
+	{"title": "Special thanks", "content": "My parents\nMy friends\nMy pet dragon"}
 ]
 
 func _ready():
@@ -47,7 +47,7 @@ func _ready():
 	for section in credits:
 		add_section(section)
 	credits_text.pop()
-	credits_text.position.y = credits_text.size.y
+	credits_text.position.y = max(credits_text.size.y, DisplayServer.window_get_size().y)
 	
 
 func add_section(section: Dictionary):
@@ -56,7 +56,7 @@ func add_section(section: Dictionary):
 	credits_text.add_text(section["title"] + "\n")
 	credits_text.pop()
 	credits_text.pop()
-	credits_text.add_text(section["content"] + "\n\n")
+	credits_text.append_text(section["content"] + "\n\n")
 
 func _process(delta):
 	scroll_speed = base_speed * delta

@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bg3at4kb0vcf6"]
+[gd_scene load_steps=8 format=3 uid="uid://bg3at4kb0vcf6"]
 
 [ext_resource type="Script" path="res://core/ui/main_menu/main_menu.gd" id="1_ideyw"]
 [ext_resource type="Theme" uid="uid://810w2dhuww4v" path="res://core/ui/main_menu/main_menu_theme.tres" id="3_y0waf"]
 [ext_resource type="PackedScene" uid="uid://crsbep170ksff" path="res://core/ui/options_menu/options_menu.tscn" id="4_myujj"]
+[ext_resource type="PackedScene" uid="uid://d2v43ymugremx" path="res://core/assets/particles/dust_particles.tscn" id="4_odl7t"]
 
 [sub_resource type="Gradient" id="Gradient_uavnr"]
-colors = PackedColorArray(0.658607, 0.799061, 0.855164, 1, 0.511924, 0.749881, 0.570495, 1)
+colors = PackedColorArray(0.658607, 0.799061, 0.855164, 1, 0.521569, 0.752941, 0.584314, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_magtn"]
 gradient = SubResource("Gradient_uavnr")
@@ -38,6 +39,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_magtn")
+
+[node name="DustParticles" parent="." instance=ExtResource("4_odl7t")]
 
 [node name="MainMenuContainer" type="MarginContainer" parent="."]
 layout_mode = 1

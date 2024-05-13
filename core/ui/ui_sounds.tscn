@@ -11,6 +11,8 @@ hover_sound = NodePath("HoverSound")
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_rltf6")
+bus = &"Sfx"
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_3js70")
+bus = &"Sfx"
