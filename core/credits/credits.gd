@@ -1,7 +1,7 @@
 extends Control
 
 @export var bg_color : Color = Color.BLACK
-@export var title_color := Color.BLUE_VIOLET
+@export var title_color := Color.BLUE
 @export var text_color := Color.WHITE
 @export var title_font : FontFile = null
 @export var text_font : FontFile = null
@@ -9,10 +9,8 @@ extends Control
 @export var Use_Video_Audio : bool = false
 @export var video : VideoStream = null
 
-const section_time := 2.0
-const line_time := 0.4
-const base_speed := 70
-const speed_up_multiplier := 10.0
+const base_speed := 5000
+const speed_up_multiplier := 5.0
 const main_menu_scene_path = "res://core/ui/main_menu/main_menu.tscn"
 
 var scroll_speed : float = base_speed
@@ -21,50 +19,15 @@ var speed_up := false
 @onready var colorrect := $ColorRect
 @onready var videoplayer := $VideoPlayer
 @onready var line := $CreditsContainer/Line
-var started := false
-var finished := false
-
-var section
-var section_next := true
-var section_timer := 0.0
-var line_timer := 0.0
-var curr_line := 0
-var lines := []
+@onready var credits_text := $CreditsContainer/RichTextLabel as RichTextLabel
 
 var credits = [
-	["A game by Awesome Game Company"],
-	[
-		"Programming",
-		"Programmer Name",
-		"Programmer Name 2"
-	],
-	[
-		"Art",
-		"Artist Name"
-	],[
-		"Music",
-		"Musician Name"
-	],[
-		"Sound Effects",
-		"SFX Name"
-	],[
-		"Testers",
-		"Name 1",
-		"Name 2",
-		"Name 3"
-	],[
-		"Tools used",
-		"Developed with Godot Engine",
-		"https://godotengine.org/license",
-		"",
-		"Art created with My Favourite Art Program",
-		"https://myfavouriteartprogram.com"
-	],[
-		"Special thanks",
-		"My parents",
-		"My friends",
-		"My pet rabbit"
-	]
+	{"title": "Programmers", "content": "Programmer Name 1\nProgrammer Name 2"},
+	{"title": "Art", "content": "Artist Name"},
+	{"title": "Music", "content": "Musician Name"},
+	{"title": "Sound Effects", "content": "SFX Name"},
+	{"title": "Testers", "content": "Name 1\nName 2\nName 3"},
+	{"title": "Tools used", "content": "Developed with Godot Engine\n[url=https://godotengine.org/license]https://godotengine.org/license[/url]"},
 ]
 
 func _ready():
@@ -79,69 +42,34 @@ func _ready():
 	else:
 		videoplayer.set_volume_db(0)
 	videoplayer.play()
+	credits_text.clear()
+	credits_text.push_paragraph(HORIZONTAL_ALIGNMENT_CENTER)
+	for section in credits:
+		add_section(section)
+	credits_text.pop()
+	credits_text.position.y = credits_text.size.y
 	
+
+func add_section(section: Dictionary):
+	credits_text.push_color(title_color)
+	credits_text.push_bold()
+	credits_text.add_text(section["title"] + "\n")
+	credits_text.pop()
+	credits_text.pop()
+	credits_text.add_text(section["content"] + "\n\n")
 
 func _process(delta):
 	scroll_speed = base_speed * delta
 	
-	if section_next:
-		section_timer += delta * speed_up_multiplier if speed_up else delta
-		if section_timer >= section_time:
-			section_timer -= section_time
-			
-			if credits.size() > 0:
-				started = true
-				section = credits.pop_front()
-				curr_line = 0
-				add_line()
-	
-	else:
-		line_timer += delta * speed_up_multiplier if speed_up else delta
-		if line_timer >= line_time:
-			line_timer -= line_time
-			add_line()
-	
 	if speed_up:
 		scroll_speed *= speed_up_multiplier
-	
-	if lines.size() > 0:
-		for l in lines:
-			l.set_global_position(l.get_global_position() - Vector2(0, scroll_speed))
-			if l.get_global_position().y < l.get_line_height():
-				lines.erase(l)
-				l.queue_free()
-	elif started:
+	if credits_text.position.y < -credits_text.size.y:
 		finish()
-
+	else:
+		credits_text.position.y -= scroll_speed * delta
 
 func finish():
-	if not finished:
-		finished = true
-		SceneManager.fade(main_menu_scene_path)
-
-
-
-func add_line():
-	var new_line = line.duplicate()
-	new_line.text = section.pop_front()
-	lines.append(new_line)
-	if curr_line == 0:
-		if title_font != null:
-			new_line.set("theme_override_fonts/font", title_font)
-		new_line.set("theme_override_colors/font_color", title_color)
-	
-	else:
-		if text_font != null:
-			new_line.set("theme_override_fonts/font", text_font)
-		new_line.set("theme_override_colors/font_color", text_color)
-	
-	$CreditsContainer.add_child(new_line)
-	
-	if section.size() > 0:
-		curr_line += 1
-		section_next = false
-	else:
-		section_next = true
+	SceneManager.fade(main_menu_scene_path)
 
 
 func _unhandled_input(event):
