@@ -20,6 +20,12 @@ config/icon="res://core/icon.svg"
 SceneManager="*res://core/autoloads/scene_manager.tscn"
 AudioManager="*res://core/autoloads/audio_manager.tscn"
 
+[display]
+
+window/size/initial_position_type=2
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [dotnet]
 
 project/assembly_name="godot_template"
