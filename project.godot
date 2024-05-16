@@ -22,9 +22,11 @@ AudioManager="*res://core/autoloads/audio_manager.tscn"
 
 [display]
 
-window/size/initial_position_type=2
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/initial_position_type=3
+window/size/initial_screen=1
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
