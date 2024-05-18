@@ -5,9 +5,9 @@ var main_menu_scene
 
 
 
-func before_all():
+func before_each():
 	main_menu_scene = preload("res://ui/main_menu/main_menu.tscn").instantiate()
-	# add_child_autoqfree(main_menu_scene)
+	add_child_autoqfree(main_menu_scene)
 
 
 func test_clicking_options_disables_main_menu():
