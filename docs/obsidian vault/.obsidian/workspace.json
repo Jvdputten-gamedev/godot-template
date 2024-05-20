@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "f567071c45b6dd70",
+    "type": "split",
+    "children": [
+      {
+        "id": "e352e596ee3330ad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "395021141a812b42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Game design template.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "716c7745896cd57b",
+    "type": "split",
+    "children": [
+      {
+        "id": "6ed26dace41a35bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d5f6d68fbe87166",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e9453fcfe4a52ab9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "af60c4edc435e5ff",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b58b2dcc7f22db84",
+    "type": "split",
+    "children": [
+      {
+        "id": "c233052839fdd67b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f80c0cf95229230",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Game design template.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f586838f3bdd0eb2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Game design template.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5c70422bb76836bc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "be34d9812f800248",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Game design template.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "395021141a812b42",
+  "lastOpenFiles": [
+    "Using the Obsidian version of this GDD.md",
+    "Historical Problem Space Framework.md",
+    "Game design template.md",
+    "2024-05-20.md",
+    "README.md"
+  ]
+}
