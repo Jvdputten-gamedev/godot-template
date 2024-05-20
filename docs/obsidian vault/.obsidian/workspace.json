@@ -141,17 +141,41 @@
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": true,
+      "obsidian-excalidraw-plugin:Create new drawing": true
     }
   },
   "active": "395021141a812b42",
   "lastOpenFiles": [
-    "Using the Obsidian version of this GDD.md",
-    "Historical Problem Space Framework.md",
-    "Game design template.md",
-    "2024-05-20.md",
-    "README.md"
+    "Game design template/Feature template.md",
+    "Game design template/Design pillars.md",
+    "Game design template/Player motivation and progression/Untitled_drawing_(2).png",
+    "Game design template/Narrative summary/Level summary/Chapter 3.md",
+    "Game design template/Narrative summary/Level summary/Chapter 2.md",
+    "Game design template/Narrative summary/Level summary/Chapter 1.md",
+    "Game design template/Narrative summary/Level summary.md",
+    "Game design template/Level summaries/Levels.md",
+    "Game design template/Level summaries/Levels/Level 1.md",
+    "Game design template/Level summaries/Levels/Level 2.md",
+    "Game design template/Level summaries/Levels/Level 3.md",
+    "Game design template/Game loops/Untitled_drawing_(1).png",
+    "Game design template/Feature template/Testing Plan Kanban.md",
+    "Game design template/Feature template/Testing plan/Prototype.md",
+    "Game design template/Feature template/Testing plan/Concept.md",
+    "Game design template/Feature template/Testing plan/Build.md",
+    "Game design template/Feature template/Testing plan.md",
+    "Excalidraw/Drawing 2024-05-20 12.40.02.excalidraw.md",
+    "Excalidraw/Drawing 2024-05-20 12.40.03.excalidraw.md",
+    "Excalidraw",
+    "Game design template/Characters/Characters/Zagreus.md",
+    "Game design template/Characters/Characters/Hades.md",
+    "Game design template/Characters/Characters/Achilles.md",
+    "Game design template/Characters/Characters.md",
+    "Background Research/notes on art style/Art Style Notes.md",
+    "Background Research/historical background/background research.md",
+    "Background Research/Excalidraw/Empty HPSF diagram.md",
+    "Game design template/Level summaries.md",
+    "Game design template.md"
   ]
 }

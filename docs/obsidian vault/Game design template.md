@@ -37,16 +37,4 @@ This is the content of your game. They’re things that can change depending on 
 
 ---
 
-# Content usage
-
-
-🛠️ Rosa Carbo-Mascarell created [the Notion version](https://glamorous-save-06a.notion.site/Game-design-template-0132383574dd4c2dbff5d14e3a90761c) as a free tool so please feel free to use it and share it!
-
-You may use, share, remix, adapt, and/or build upon any of the content found on this site, in both commercial and non-commercial settings, as long as done for **free**.
-
-A link back to this document and/or a credit is appreciated but not necessary.
-
-Credit Carbo-Mascarell for the Notion version; Credit S Graham for this Obsidian formatted version.
-
-
 

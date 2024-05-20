@@ -7,8 +7,8 @@ kanban-plugin: basic
 ## To do
 
 - [ ] ![[Concept]]
-- [ ] ![[Prototype]]
 - [ ] ![[Build]]
+- [ ] ![[Prototype]]
 
 
 ## Doing
