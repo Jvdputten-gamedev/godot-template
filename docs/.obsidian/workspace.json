@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Game design template.md",
+                "file": "Background Research/notes on art style/Art Style Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Game design template.md",
+                "file": "Background Research/notes on art style/Art Style Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Game design template.md",
+                "file": "Background Research/notes on art style/Art Style Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Game design template.md"
+                "file": "Background Research/notes on art style/Art Style Notes.md"
               }
             }
           }
@@ -143,11 +143,14 @@
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": true,
-      "obsidian-excalidraw-plugin:Create new drawing": true
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
   "active": "395021141a812b42",
   "lastOpenFiles": [
+    "Background Research/background/background research.md",
+    "Game design template/Feature template/Testing Plan Kanban.md",
+    "Game design template.md",
     "Game design template/Feature template.md",
     "Game design template/Design pillars.md",
     "Game design template/Player motivation and progression/Untitled_drawing_(2).png",
@@ -160,7 +163,6 @@
     "Game design template/Level summaries/Levels/Level 2.md",
     "Game design template/Level summaries/Levels/Level 3.md",
     "Game design template/Game loops/Untitled_drawing_(1).png",
-    "Game design template/Feature template/Testing Plan Kanban.md",
     "Game design template/Feature template/Testing plan/Prototype.md",
     "Game design template/Feature template/Testing plan/Concept.md",
     "Game design template/Feature template/Testing plan/Build.md",
@@ -173,9 +175,7 @@
     "Game design template/Characters/Characters/Achilles.md",
     "Game design template/Characters/Characters.md",
     "Background Research/notes on art style/Art Style Notes.md",
-    "Background Research/historical background/background research.md",
     "Background Research/Excalidraw/Empty HPSF diagram.md",
-    "Game design template/Level summaries.md",
-    "Game design template.md"
+    "Game design template/Level summaries.md"
   ]
 }
