@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://870qkat0x044"
+
+[deps]
+
+files=["res://docs/Game design template/Feature template/Testing plan.Type of testing.translation", "res://docs/Game design template/Feature template/Testing plan.Comments.translation"]
+
+source_file="res://docs/Game design template/Feature template/Testing plan.csv"
+dest_files=["res://docs/Game design template/Feature template/Testing plan.Type of testing.translation", "res://docs/Game design template/Feature template/Testing plan.Comments.translation"]
+
+[params]
+
+compress=true
+delimiter=0

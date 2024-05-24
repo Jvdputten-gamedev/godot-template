@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cyw07sysog5uh"]
+[gd_scene load_steps=5 format=3 uid="uid://cyw07sysog5uh"]
 
 [ext_resource type="PackedScene" uid="uid://dlxc1j0sdvabq" path="res://ui/options_menu/hotkey_rebind_button.tscn" id="1_f2cf8"]
 [ext_resource type="Script" path="res://ui/options_menu/settings_tab_container.gd" id="1_hp3iv"]
 [ext_resource type="PackedScene" uid="uid://ci0u4h7k1f5nh" path="res://ui/options_menu/audio_slider_settings.tscn" id="1_v0kfs"]
-[ext_resource type="PackedScene" uid="uid://c5dwbmoueogno" path="res://ui/options_menu/window_mode_button.tscn" id="1_ydr6d"]
-[ext_resource type="PackedScene" uid="uid://p0xa8g0n50n0" path="res://ui/options_menu/resolution_mode_button.tscn" id="2_ca3vl"]
+[ext_resource type="PackedScene" uid="uid://drbs8u6ai0tym" path="res://ui/options_menu/graphics_settings.tscn" id="3_wxjwq"]
 
 [node name="SettingsTabContainer" type="Control" node_paths=PackedStringArray("tab_container")]
 layout_mode = 3
@@ -94,10 +93,8 @@ alignment = 1
 [node name="HSeparator" type="HSeparator" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="WindowModeButton" parent="TabContainer/Graphics/MarginContainer/VBoxContainer" instance=ExtResource("1_ydr6d")]
-layout_mode = 2
-
-[node name="ResolutionModeButton" parent="TabContainer/Graphics/MarginContainer/VBoxContainer" instance=ExtResource("2_ca3vl")]
+[node name="Options_Example" parent="TabContainer/Graphics/MarginContainer/VBoxContainer" instance=ExtResource("3_wxjwq")]
+custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 
 [node name="HSeparator2" type="HSeparator" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]

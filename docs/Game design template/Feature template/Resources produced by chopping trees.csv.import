@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ddxxk2ip4dvm4"
+
+[deps]
+
+files=["res://docs/Game design template/Feature template/Resources produced by chopping trees.Produced item.translation", "res://docs/Game design template/Feature template/Resources produced by chopping trees.Value.translation"]
+
+source_file="res://docs/Game design template/Feature template/Resources produced by chopping trees.csv"
+dest_files=["res://docs/Game design template/Feature template/Resources produced by chopping trees.Produced item.translation", "res://docs/Game design template/Feature template/Resources produced by chopping trees.Value.translation"]
+
+[params]
+
+compress=true
+delimiter=0

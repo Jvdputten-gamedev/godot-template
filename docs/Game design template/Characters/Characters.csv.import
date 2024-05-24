@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bgi2gec0r1iw4"
+
+[deps]
+
+files=["res://docs/Game design template/Characters/Characters.Relationships.translation", "res://docs/Game design template/Characters/Characters.Description.translation", "res://docs/Game design template/Characters/Characters.Wants.translation", "res://docs/Game design template/Characters/Characters.Needs.translation", "res://docs/Game design template/Characters/Characters.Story arch.translation"]
+
+source_file="res://docs/Game design template/Characters/Characters.csv"
+dest_files=["res://docs/Game design template/Characters/Characters.Relationships.translation", "res://docs/Game design template/Characters/Characters.Description.translation", "res://docs/Game design template/Characters/Characters.Wants.translation", "res://docs/Game design template/Characters/Characters.Needs.translation", "res://docs/Game design template/Characters/Characters.Story arch.translation"]
+
+[params]
+
+compress=true
+delimiter=0

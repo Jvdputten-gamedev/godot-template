@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://brkyma5122btg"
+
+[deps]
+
+files=["res://docs/Game design template/Level summaries/Levels.Mechanics needed.translation", "res://docs/Game design template/Level summaries/Levels.Obstacles.translation", "res://docs/Game design template/Level summaries/Levels.Setting.translation", "res://docs/Game design template/Level summaries/Levels.Description.translation"]
+
+source_file="res://docs/Game design template/Level summaries/Levels.csv"
+dest_files=["res://docs/Game design template/Level summaries/Levels.Mechanics needed.translation", "res://docs/Game design template/Level summaries/Levels.Obstacles.translation", "res://docs/Game design template/Level summaries/Levels.Setting.translation", "res://docs/Game design template/Level summaries/Levels.Description.translation"]
+
+[params]
+
+compress=true
+delimiter=0

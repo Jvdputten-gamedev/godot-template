@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://xt0rpq2tq8mb"
+
+[deps]
+
+files=["res://docs/Game design template/Narrative summary/Level summary.Main plot points.translation", "res://docs/Game design template/Narrative summary/Level summary.Setting.translation"]
+
+source_file="res://docs/Game design template/Narrative summary/Level summary.csv"
+dest_files=["res://docs/Game design template/Narrative summary/Level summary.Main plot points.translation", "res://docs/Game design template/Narrative summary/Level summary.Setting.translation"]
+
+[params]
+
+compress=true
+delimiter=0
