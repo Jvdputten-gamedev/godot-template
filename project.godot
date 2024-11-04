@@ -19,6 +19,7 @@ config/icon="res://core/icon.svg"
 
 SceneManager="*res://autoloads/scene_manager.tscn"
 AudioManager="*res://autoloads/audio_manager.tscn"
+Shaker="*res://addons/shaker/src/Shaker.gd"
 
 [display]
 
@@ -34,7 +35,7 @@ project/assembly_name="godot_template"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/filesystem_drawer/plugin.cfg", "res://addons/godot_state_charts/plugin.cfg", "res://addons/gut/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_state_charts/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [file_customization]
 
