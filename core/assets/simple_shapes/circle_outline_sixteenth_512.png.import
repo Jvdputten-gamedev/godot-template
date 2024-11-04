@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2pbynreeswax"
-path="res://.godot/imported/circle_outline_sixteenth_512.png-9a80f4e86d91e7e4c157a157ce6663c0.ctex"
+path="res://.godot/imported/circle_outline_sixteenth_512.png-6b1ac3ab33c9a61376ad203a4779c398.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/assets/simple_shapes/circle_outline_sixteenth_512.png"
-dest_files=["res://.godot/imported/circle_outline_sixteenth_512.png-9a80f4e86d91e7e4c157a157ce6663c0.ctex"]
+source_file="res://core/assets/simple_shapes/circle_outline_sixteenth_512.png"
+dest_files=["res://.godot/imported/circle_outline_sixteenth_512.png-6b1ac3ab33c9a61376ad203a4779c398.ctex"]
 
 [params]
 

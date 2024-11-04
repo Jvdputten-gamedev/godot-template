@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmdkp7ne6eok5"
-path="res://.godot/imported/square_outline_quarter_1024.png-b06ad85ebf8432de6a1af090d614aa25.ctex"
+path="res://.godot/imported/square_outline_quarter_1024.png-8f058f06d42730f5d655578a1cd6f975.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/assets/simple_shapes/square_outline_quarter_1024.png"
-dest_files=["res://.godot/imported/square_outline_quarter_1024.png-b06ad85ebf8432de6a1af090d614aa25.ctex"]
+source_file="res://core/assets/simple_shapes/square_outline_quarter_1024.png"
+dest_files=["res://.godot/imported/square_outline_quarter_1024.png-8f058f06d42730f5d655578a1cd6f975.ctex"]
 
 [params]
 

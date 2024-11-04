@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://daomc7ekx38kd"
-path="res://.godot/imported/circle_gradient_soft_64.png-8a73982d35c3c88d2de88287b369228c.ctex"
+path="res://.godot/imported/circle_gradient_soft_64.png-85c1fe8417613a1507a929041bf1fe53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/assets/simple_shapes/circle_gradient_soft_64.png"
-dest_files=["res://.godot/imported/circle_gradient_soft_64.png-8a73982d35c3c88d2de88287b369228c.ctex"]
+source_file="res://core/assets/simple_shapes/circle_gradient_soft_64.png"
+dest_files=["res://.godot/imported/circle_gradient_soft_64.png-85c1fe8417613a1507a929041bf1fe53.ctex"]
 
 [params]
 

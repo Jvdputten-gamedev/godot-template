@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j7f6cjm5mb8l"
-path="res://.godot/imported/square_outline_sixteenth_256.png-1056e5fe19d506d82efd7631eadfe95e.ctex"
+path="res://.godot/imported/square_outline_sixteenth_256.png-fa27436608d5201c9516e5d457f4c007.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/assets/simple_shapes/square_outline_sixteenth_256.png"
-dest_files=["res://.godot/imported/square_outline_sixteenth_256.png-1056e5fe19d506d82efd7631eadfe95e.ctex"]
+source_file="res://core/assets/simple_shapes/square_outline_sixteenth_256.png"
+dest_files=["res://.godot/imported/square_outline_sixteenth_256.png-fa27436608d5201c9516e5d457f4c007.ctex"]
 
 [params]
 

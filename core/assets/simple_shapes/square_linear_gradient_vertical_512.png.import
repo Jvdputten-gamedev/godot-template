@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdlg6ygjiobma"
-path="res://.godot/imported/square_linear_gradient_vertical_512.png-bb7ae1dd518959ebe6000f2fece9f44e.ctex"
+path="res://.godot/imported/square_linear_gradient_vertical_512.png-d181c351fa16f2cf6030d96c55ebb9ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/assets/simple_shapes/square_linear_gradient_vertical_512.png"
-dest_files=["res://.godot/imported/square_linear_gradient_vertical_512.png-bb7ae1dd518959ebe6000f2fece9f44e.ctex"]
+source_file="res://core/assets/simple_shapes/square_linear_gradient_vertical_512.png"
+dest_files=["res://.godot/imported/square_linear_gradient_vertical_512.png-d181c351fa16f2cf6030d96c55ebb9ec.ctex"]
 
 [params]
 
