@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cmmk31d282i46"]
 
-[ext_resource type="Script" path="res://shared/credits/credits.gd" id="1_fsowh"]
+[ext_resource type="Script" path="res://core/credits/credits.gd" id="1_fsowh"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3

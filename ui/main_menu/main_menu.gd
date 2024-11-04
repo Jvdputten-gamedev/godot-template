@@ -9,9 +9,6 @@ extends Control
 @export var options_menu: OptionsMenu
 @export var main_menu_container: MarginContainer
 
-const PATH_TO_CREDITS = "res://shared/credits/credits.tscn"
-const PATH_TO_MAIN_SCENE = "res://shared/main.tscn"
-
 
 
 func _ready():
@@ -25,7 +22,7 @@ func _ready():
 
 
 func _on_start_button_down():
-	SceneManager.fade(PATH_TO_MAIN_SCENE)
+	SceneManager.to_main_scene()
 
 func _on_options_button_down():
 	main_menu_container.visible = false
@@ -38,4 +35,4 @@ func _on_exit_options_menu() -> void:
 	main_menu_container.visible = true
 
 func _on_credits_button_pressed() -> void:
-	SceneManager.fade(PATH_TO_CREDITS)
+	SceneManager.to_credits()

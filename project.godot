@@ -13,7 +13,7 @@ config_version=5
 config/name="godot_template"
 run/main_scene="res://ui/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://shared/icon.svg"
+config/icon="res://core/icon.svg"
 
 [autoload]
 
@@ -41,7 +41,7 @@ enabled=PackedStringArray("res://addons/filesystem_drawer/plugin.cfg", "res://ad
 folder_colors={
 "res://addons/": "gray",
 "res://autoloads/": "red",
-"res://shared/": "orange",
+"res://core/": "orange",
 "res://test/": "purple",
 "res://ui/": "pink"
 }

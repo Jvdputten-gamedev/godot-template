@@ -11,7 +11,6 @@ extends Control
 
 const base_speed := 5000
 const speed_up_multiplier := 5.0
-const main_menu_scene_path = "res://ui/main_menu/main_menu.tscn"
 
 var scroll_speed : float = base_speed
 var speed_up := false
@@ -69,8 +68,7 @@ func _process(delta):
 		credits_text.position.y -= scroll_speed * delta
 
 func finish():
-	SceneManager.fade(main_menu_scene_path)
-
+	SceneManager.to_main_menu()
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
