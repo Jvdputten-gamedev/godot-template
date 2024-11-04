@@ -32,10 +32,3 @@ func options_menu_input() -> void:
 
 	if Input.is_action_just_pressed("ui_cancel"):
 		exit_options_menu.emit()
-
-
-
-
-
-
-

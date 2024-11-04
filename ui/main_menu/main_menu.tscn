@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bg3at4kb0vcf6"]
+[gd_scene load_steps=8 format=3 uid="uid://bg3at4kb0vcf6"]
 
 [ext_resource type="Script" path="res://ui/main_menu/main_menu.gd" id="1_ideyw"]
-[ext_resource type="Script" path="res://core/assets/particles/dust_particles.gd" id="3_6ux2k"]
 [ext_resource type="Theme" uid="uid://810w2dhuww4v" path="res://ui/main_menu/main_menu_theme.tres" id="3_y0waf"]
 [ext_resource type="PackedScene" uid="uid://crsbep170ksff" path="res://ui/options_menu/options_menu.tscn" id="4_myujj"]
 [ext_resource type="PackedScene" uid="uid://d2v43ymugremx" path="res://core/assets/particles/dust_particles.tscn" id="4_odl7t"]
@@ -43,7 +42,6 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_magtn")
 
 [node name="DustParticles" parent="." instance=ExtResource("4_odl7t")]
-script = ExtResource("3_6ux2k")
 
 [node name="MainMenuContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -71,7 +69,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = SubResource("SystemFont_t882a")
 theme_override_font_sizes/font_size = 64
-text = "GAME TITLE"
+text = "Cypher punk"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainMenuContainer"]
 layout_mode = 2

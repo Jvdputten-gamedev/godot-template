@@ -18,8 +18,6 @@ func _ready():
 	quit_button.button_down.connect(_on_quit_button_down)
 	options_menu.exit_options_menu.connect(_on_exit_options_menu)
 
-	AudioManager.ui_sounds.connect_ui_elements(self)
-
 
 func _on_start_button_down():
 	SceneManager.to_main_scene()

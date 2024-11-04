@@ -4,24 +4,25 @@ extends Node
 @export var click_sound: AudioStreamPlayer
 @export var hover_sound: AudioStreamPlayer
 
-func connect_ui_elements(node):
-	for child in node.get_children():
+func _enter_tree():
+	print("connecting to tree")
+	get_tree().node_added.connect(connect_ui_element)
 
-		if child is Button:
-			child.mouse_entered.connect(func(): hover_sound.play())
-			child.pressed.connect(func(): click_sound.play())
+func connect_ui_element(node):
+	print("connecting ui element ", node)
+	if node is Button:
+		node.mouse_entered.connect(func(): hover_sound.play())
+		node.pressed.connect(func(): click_sound.play())
 
-		if child is Range:
-			child.mouse_entered.connect(func(): hover_sound.play())
-			child.drag_started.connect(func(): click_sound.play())		
-			child.drag_ended.connect(_on_range_drag_ended)		
+	if node is Slider:
+		node.mouse_entered.connect(func(): hover_sound.play())
+		node.drag_started.connect(func(): click_sound.play())		
+		node.drag_ended.connect(_on_range_drag_ended)		
 
-		if child is TabContainer:
-			child.tab_hovered.connect(_on_tab_hovered)
-			child.tab_selected.connect(_on_tab_clicked)
+	if node is TabContainer:
+		node.tab_hovered.connect(_on_tab_hovered)
+		node.tab_selected.connect(_on_tab_clicked)
 
-
-		connect_ui_elements(child)
 
 func _on_range_drag_ended(_value_changed: bool):
 	if _value_changed:
